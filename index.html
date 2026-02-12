@@ -1,175 +1,148 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raghvendra Singh | Finance & Marketing Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f6f9;
-    color: #1f2933;
-    line-height: 1.7;
-}
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">Raghvendra Singh</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="Raghvendra_Singh_CV.pdf" target="_blank">Resume</a></li>
+        </ul>
+    </div>
+</nav>
 
-/* NAVBAR */
-.navbar {
-    background: #0f172a;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-box">
+        <h1>Finance & Marketing Professional</h1>
+        <p class="hero-sub">
+            PGDM (Finance & Marketing) | Financial Analysis • Business Strategy • Market Research
+        </p>
 
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 16px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        <div class="hero-meta">
+            <span>📍 Greater Noida</span>
+            <span>📞 7270897221</span>
+            <span>✉️ raghvendra.singh@glbimr.org</span>
+        </div>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+        <div class="hero-actions">
+            <a href="Raghvendra_Singh_CV.pdf" class="btn primary" target="_blank">View Resume</a>
+            <a href="https://www.linkedin.com/in/raghvendra-singh-2026rs" class="btn outline" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</section>
 
-.nav-links a {
-    color: #e5e7eb;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
+<!-- ABOUT -->
+<section class="section light" id="about">
+    <div class="content-box">
+        <h2>About Me</h2>
+        <p>
+            I am a B.Com (Hons) graduate from Chandigarh University, currently pursuing
+            PGDM in Finance & Marketing. I have professional experience as a Finance
+            Associate where I managed financial operations, conducted analysis, and
+            supported forecasting and reporting activities to improve business efficiency.
+        </p>
+    </div>
+</section>
 
-.nav-links a:hover {
-    color: #eab308;
-}
+<!-- SKILLS -->
+<section class="section skills-section">
+    <h2 class="center">Core Skills</h2>
+    <div class="skills-grid">
+        <span>Financial Analysis & Forecasting</span>
+        <span>Budgeting & Cost Control</span>
+        <span>Market & Competitor Analysis</span>
+        <span>Marketing Strategy & Planning</span>
+        <span>Excel (Advanced Functions, Pivot Tables)</span>
+        <span>Power BI (Sales Dashboards)</span>
+        <span>IBM SPSS (Intermediate)</span>
+        <span>Business Reporting</span>
+    </div>
+</section>
 
-/* HERO */
-.hero {
-    background: linear-gradient(135deg, #020617, #0f172a);
-    color: white;
-    padding: 90px 20px;
-    text-align: center;
-}
+<!-- EXPERIENCE -->
+<section class="section light" id="experience">
+    <h2 class="center">Experience</h2>
 
-.hero-box {
-    max-width: 800px;
-    margin: auto;
-}
+    <div class="timeline">
+        <div class="card">
+            <h3>Finance Associate – Modento Pvt. Ltd.</h3>
+            <p class="meta">Aug 2023 – Jun 2025</p>
+            <ul>
+                <li>Analyzed financial statements, budgets, and forecasts</li>
+                <li>Supported financial planning and cost optimization</li>
+                <li>Prepared financial reports using Excel and accounting tools</li>
+            </ul>
+        </div>
 
-.hero-sub {
-    margin: 10px 0;
-    opacity: 0.9;
-}
+        <div class="card">
+            <h3>Finance Intern – Learnovate E-Commerce</h3>
+            <p class="meta">2023 (1.5 months)</p>
+            <ul>
+                <li>Assisted in basic financial analysis and reporting</li>
+            </ul>
+        </div>
 
-.hero-meta span {
-    display: inline-block;
-    margin: 6px 10px;
-    font-size: 0.9rem;
-}
+        <div class="card">
+            <h3>Live Project – Dabur India Ltd.</h3>
+            <p class="meta">Aug 2025</p>
+            <ul>
+                <li>Worked on marketing strategy and consumer insights</li>
+                <li>Supported brand positioning and market research</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-/* BUTTONS */
-.btn {
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin: 6px;
-    display: inline-block;
-}
+<!-- PROJECTS -->
+<section class="section">
+    <h2 class="center">Projects & Academic Work</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Marketing & Sales Analysis (Power BI)</h3>
+            <p>
+                Created interactive dashboards to analyze sales trends, customer behavior,
+                and marketing performance using sample datasets.
+            </p>
+        </div>
 
-.primary {
-    background: #eab308;
-    color: #0f172a;
-}
+        <div class="card">
+            <h3>Financial Reporting & Analysis (Excel)</h3>
+            <p>
+                Developed financial summaries, variance analysis, and business reports
+                using Excel and PowerPoint.
+            </p>
+        </div>
+    </div>
+</section>
 
-.outline {
-    border: 2px solid #eab308;
-    color: #eab308;
-}
+<!-- CERTIFICATIONS -->
+<section class="section light">
+    <h2 class="center">Certifications</h2>
+    <ul class="cert-list">
+        <li>Portfolio & Risk Management – University of Geneva (Coursera)</li>
+        <li>Leadership Skills – IIM Ahmedabad (Coursera)</li>
+        <li>Investment Banking Job Simulation – JP Morgan (Forage)</li>
+        <li>Google Data Analytics – Coursera</li>
+        <li>IELTS Qualified – B2 Level</li>
+    </ul>
+</section>
 
-/* SECTIONS */
-.section {
-    padding: 70px 20px;
-}
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Raghvendra Singh | Finance & Marketing Portfolio</p>
+</footer>
 
-.section.light {
-    background: white;
-}
+</body>
+</html>
 
-.center {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.content-box {
-    max-width: 900px;
-    margin: auto;
-}
-
-/* SKILLS */
-.skills-grid {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-}
-
-.skills-grid span {
-    background: #eef2f7;
-    padding: 10px 16px;
-    border-radius: 18px;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-/* EXPERIENCE */
-.timeline {
-    max-width: 900px;
-    margin: auto;
-    display: grid;
-    gap: 30px;
-}
-
-.card {
-    background: white;
-    padding: 28px;
-    border-radius: 10px;
-}
-
-.meta {
-    font-size: 0.85rem;
-    color: #6b7280;
-}
-
-/* PROJECTS */
-.projects {
-    max-width: 900px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-/* CERTIFICATIONS */
-.cert-list {
-    max-width: 900px;
-    margin: auto;
-    list-style: none;
-    display: grid;
-    gap: 10px;
-}
-
-/* FOOTER */
-.footer {
-    background: #0f172a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .hero {
-        padding: 70px 20px;
-    }
-    .nav-links {
-        font-size: 0.85rem;
-    }
-}
