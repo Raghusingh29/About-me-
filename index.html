@@ -1,119 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Raghvendra Singh | Finance & Marketing Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">Raghvendra Singh</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Experience</a></li>
-            <li><a href="Raghvendra_Singh_CV.pdf" target="_blank">Resume</a></li>
-        </ul>
-    </div>
-</nav>
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1f2933;
+    line-height: 1.7;
+}
 
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="hero-box fade-in">
-        <h1>Finance & Marketing Professional</h1>
-        <p class="hero-sub">
-            PGDM (Finance & Marketing) | Financial Analysis • Business Reporting • Market Strategy
-        </p>
+/* NAVBAR */
+.navbar {
+    background: #0f172a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        <div class="hero-meta">
-            <span>📍 Greater Noida</span>
-            <span>📞 7270897221</span>
-            <span>✉️ raghvendra.singh@glbimr.org</span>
-        </div>
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        <div class="hero-actions">
-            <a href="Raghvendra_Singh_CV.pdf" class="btn primary" target="_blank">View Resume</a>
-            <a href="https://www.linkedin.com/in/raghvendra-singh-2026rs" target="_blank" class="btn outline">LinkedIn</a>
-        </div>
-    </div>
-</section>
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-<!-- ABOUT + SKILLS -->
-<section class="section light" id="about">
-    <div class="two-col">
+.nav-links a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
 
-        <div class="box reveal">
-            <h2>Who I Am</h2>
-            <p>
-                I am a PGDM (Finance & Marketing) candidate with experience in financial
-                reporting, budgeting, forecasting, and market research. I have worked in
-                corporate finance operations and live marketing projects, translating data
-                into business insights.
-            </p>
-        </div>
+.nav-links a:hover {
+    color: #eab308;
+}
 
-        <div class="box reveal">
-            <h2>Core Strengths</h2>
-            <ul class="pill-list">
-                <li>Financial Analysis & Reporting</li>
-                <li>Budgeting & Cost Control</li>
-                <li>Excel & MIS Reporting</li>
-                <li>Market Research</li>
-                <li>Marketing Strategy</li>
-                <li>Business Communication</li>
-            </ul>
-        </div>
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+}
 
-    </div>
-</section>
+.hero-box {
+    max-width: 800px;
+    margin: auto;
+}
 
-<!-- EXPERIENCE -->
-<section class="section dark" id="work">
-    <h2 class="section-title">Professional Experience</h2>
+.hero-sub {
+    margin: 10px 0;
+    opacity: 0.9;
+}
 
-    <div class="timeline">
+.hero-meta span {
+    display: inline-block;
+    margin: 6px 10px;
+    font-size: 0.9rem;
+}
 
-        <div class="timeline-card reveal">
-            <h3>Finance Associate</h3>
-            <span class="company">Modento Pvt. Ltd. | Aug 2023 – Jun 2025</span>
-            <p>
-                Worked on financial reporting, budgeting, variance analysis, and Excel-based
-                dashboards to support management decisions and cost optimization.
-            </p>
-        </div>
+/* BUTTONS */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 6px;
+    display: inline-block;
+}
 
-        <div class="timeline-card reveal">
-            <h3>Marketing Live Project</h3>
-            <span class="company">Dabur India Ltd. | Aug 2025</span>
-            <p>
-                Supported consumer insights, competitor analysis, pricing evaluation, and
-                promotional strategy as part of an academic live project.
-            </p>
-        </div>
+.primary {
+    background: #eab308;
+    color: #0f172a;
+}
 
-    </div>
-</section>
+.outline {
+    border: 2px solid #eab308;
+    color: #eab308;
+}
 
-<!-- FOOTER -->
-<footer class="footer">
-    <p>© 2026 Raghvendra Singh | Finance & Marketing Portfolio</p>
-</footer>
+/* SECTIONS */
+.section {
+    padding: 70px 20px;
+}
 
-<script>
-const reveals = document.querySelectorAll('.reveal');
-window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-            el.classList.add('active');
-        }
-    });
-});
-</script>
+.section.light {
+    background: white;
+}
 
-</body>
-</html>
+.center {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content-box {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* SKILLS */
+.skills-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.skills-grid span {
+    background: #eef2f7;
+    padding: 10px 16px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* EXPERIENCE */
+.timeline {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* PROJECTS */
+.projects {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* CERTIFICATIONS */
+.cert-list {
+    max-width: 900px;
+    margin: auto;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero {
+        padding: 70px 20px;
+    }
+    .nav-links {
+        font-size: 0.85rem;
+    }
+}
