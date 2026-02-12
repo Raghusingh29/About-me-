@@ -47,21 +47,18 @@
 <!-- MAIN CONTENT -->
 <main class="container">
 
-<!-- PROFILE -->
-<section class="card fade-up" id="profile">
+<section class="card reveal" id="profile">
     <h2>Professional Profile</h2>
     <p>
-        PGDM (Finance & Marketing) candidate with a strong academic foundation in
-        financial management, marketing strategy, and business decision-making.
-        Experienced in financial analysis, budgeting, reporting, and market research,
-        with practical exposure to corporate finance operations and marketing projects.
-        Seeking entry-level opportunities in finance, marketing, or management roles
-        where analytical thinking and business understanding can add value.
+        PGDM (Finance & Marketing) candidate with strong academic grounding in financial
+        management and marketing strategy. Experienced in financial reporting, budgeting,
+        cost control, and market research with exposure to real-world corporate finance
+        operations and marketing projects. Seeking entry-level roles in finance,
+        marketing, or management.
     </p>
 </section>
 
-<!-- EDUCATION -->
-<section class="card fade-up">
+<section class="card reveal">
     <h2>Education</h2>
     <ul>
         <li><strong>PGDM (Finance & Marketing)</strong> – G.L. Bajaj Institute of Management & Research (2025–2027)</li>
@@ -71,16 +68,15 @@
     </ul>
 </section>
 
-<!-- EXPERIENCE -->
-<section class="card fade-up">
+<section class="card reveal">
     <h2>Internship & Work Experience</h2>
 
     <h3>Finance Associate – Modento Pvt. Ltd.</h3>
     <p><em>Aug 2023 – Jun 2025</em></p>
     <ul>
         <li>Analyzed financial statements, budgets, and expense reports</li>
-        <li>Assisted in financial planning, forecasting, and cost control activities</li>
-        <li>Prepared reports using Excel to support management decision-making</li>
+        <li>Supported financial planning, forecasting, and cost optimization</li>
+        <li>Prepared Excel-based reports for management decision-making</li>
         <li>Ensured accuracy and compliance in financial documentation</li>
     </ul>
 
@@ -88,13 +84,12 @@
     <p><em>Aug 2025</em></p>
     <ul>
         <li>Worked on marketing strategy, consumer insights, and brand positioning</li>
-        <li>Conducted market and competitor analysis to support marketing decisions</li>
+        <li>Conducted market and competitor analysis</li>
         <li>Supported pricing and promotional strategy evaluation</li>
     </ul>
 </section>
 
-<!-- FINANCE & MARKETING SKILLS -->
-<section class="card fade-up">
+<section class="card reveal">
     <h2>Finance & Marketing Skills</h2>
     <div class="skills">
         <span>Financial Analysis & Reporting</span>
@@ -107,20 +102,18 @@
     </div>
 </section>
 
-<!-- TOOLS -->
-<section class="card fade-up">
+<section class="card reveal">
     <h2>Tools & Software</h2>
     <div class="skills">
         <span>Microsoft Excel (Advanced)</span>
         <span>PowerPoint (Business Presentations)</span>
         <span>Microsoft Word</span>
         <span>Power BI (Basic Dashboards)</span>
-        <span>IBM SPSS (Basic Statistical Analysis)</span>
+        <span>IBM SPSS (Basic Analysis)</span>
     </div>
 </section>
 
-<!-- SOFT SKILLS -->
-<section class="card fade-up">
+<section class="card reveal">
     <h2>Professional Skills</h2>
     <div class="skills">
         <span>Business Communication</span>
@@ -137,6 +130,48 @@
 <footer id="contact">
     <p>© 2026 Raghvendra Singh | 📞 7270897221 | ✉️ raghvendra.singh@glbimr.org</p>
 </footer>
+
+<!-- INTERACTION SCRIPT -->
+<script>
+/* Scroll reveal */
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+    reveals.forEach(section => {
+        const windowHeight = window.innerHeight;
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < windowHeight - 100) {
+            section.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+/* Navbar shadow + active link */
+const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+
+    let current = '';
+    document.querySelectorAll('section[id]').forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
