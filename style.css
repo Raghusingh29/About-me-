@@ -173,3 +173,110 @@ body {
         font-size: 0.85rem;
     }
 }
+/* DASHBOARD */
+.dashboard-section {
+    background: #f8fafc;
+}
+
+.kpi-grid {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.kpi-card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-6px);
+}
+
+.kpi-card h3 {
+    font-size: 2.2rem;
+    color: #0f172a;
+}
+
+.kpi-card p {
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+/* CHARTS */
+.charts-grid {
+    max-width: 1100px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.chart-card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* BAR CHART */
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    height: 180px;
+    margin-top: 25px;
+}
+
+.bar {
+    flex: 1;
+    background: linear-gradient(180deg, #facc15, #ca8a04);
+    border-radius: 8px;
+    color: #111827;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 8px;
+    animation: growBar 1.2s ease;
+}
+
+@keyframes growBar {
+    from { height: 0; }
+}
+
+/* PROGRESS */
+.progress {
+    margin: 18px 0;
+}
+
+.progress label {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.progress-bar {
+    background: #e5e7eb;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+    animation: loadBar 1.5s ease;
+}
+
+@keyframes loadBar {
+    from { width: 0; }
+}
+
