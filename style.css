@@ -1,67 +1,68 @@
 /* ===============================
-   PROJECTS SECTION
+   GLOBAL ANIMATIONS
 ================================ */
 
-.section-subtitle {
-    margin-bottom: 25px;
-    color: #555;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-/* Project Card */
-.project-card {
-    background: #f9fbfd;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: all 0.35s ease;
+/* Fade In */
+.fade-in {
     opacity: 0;
-    transform: translateY(30px);
-    animation: projectFadeUp 0.9s ease forwards;
+    animation: fadeIn 1.2s ease forwards;
 }
 
-/* Stagger animation */
-.project-card:nth-child(1) { animation-delay: 0.2s; }
-.project-card:nth-child(2) { animation-delay: 0.4s; }
-.project-card:nth-child(3) { animation-delay: 0.6s; }
-
-/* Hover effect */
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+/* Fade Up */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
 }
 
-/* Icon */
-.project-icon {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
+/* Stagger effect */
+.fade-up:nth-of-type(1) { animation-delay: 0.2s; }
+.fade-up:nth-of-type(2) { animation-delay: 0.4s; }
+.fade-up:nth-of-type(3) { animation-delay: 0.6s; }
+.fade-up:nth-of-type(4) { animation-delay: 0.8s; }
 
-/* Button */
-.project-btn {
-    display: inline-block;
-    margin-top: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #0b3c5d;
-    transition: all 0.3s ease;
-}
-
-.project-btn:hover {
-    color: #ffcc00;
-    transform: translateX(4px);
-}
-
-/* Animation */
-@keyframes projectFadeUp {
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   HOVER INTERACTIONS
+================================ */
+
+.card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.25);
 }
