@@ -1,6 +1,4 @@
-/* =====================
-   GLOBAL RESET
-===================== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,20 +6,16 @@
 }
 
 body {
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   background: #f5f7fb;
   color: #1e293b;
-  line-height: 1.6;
 }
 
-/* =====================
-   NAVBAR
-===================== */
+/* NAVBAR */
 .navbar {
+  background: linear-gradient(135deg, #0b1d39, #102b5c);
   position: sticky;
   top: 0;
-  background: linear-gradient(135deg, #0b1d39, #102b5c);
-  z-index: 1000;
 }
 
 .nav-container {
@@ -34,30 +28,26 @@ body {
 }
 
 .nav-logo {
-  color: #ffffff;
+  color: white;
   font-weight: 600;
-  font-size: 1.1rem;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 22px;
+  gap: 20px;
 }
 
 .nav-links a {
   color: #e5e7eb;
   text-decoration: none;
-  font-size: 0.95rem;
 }
 
 .nav-links a:hover {
   color: #facc15;
 }
 
-/* =====================
-   HERO
-===================== */
+/* HERO */
 .hero {
   background: linear-gradient(135deg, #020617, #0b1d39);
   padding: 90px 20px;
@@ -71,50 +61,27 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 10px;
-}
-
-.hero-sub {
-  font-size: 1.1rem;
-  opacity: 0.9;
+  font-size: 2.5rem;
 }
 
 .hero-meta {
-  margin: 18px 0;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 18px;
-  font-size: 0.95rem;
+  flex-wrap: wrap;
 }
 
-.hero-actions {
-  margin-top: 22px;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-/* =====================
-   BUTTONS
-===================== */
+/* BUTTONS */
 .btn {
   padding: 12px 22px;
   border-radius: 30px;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
 }
 
 .btn.primary {
   background: #facc15;
   color: #020617;
-  font-weight: 600;
-}
-
-.btn.primary:hover {
-  background: #eab308;
 }
 
 .btn.outline {
@@ -122,20 +89,13 @@ body {
   color: #facc15;
 }
 
-.btn.outline:hover {
-  background: #facc15;
-  color: #020617;
-}
-
-/* =====================
-   SECTIONS
-===================== */
+/* SECTIONS */
 .section {
   padding: 70px 20px;
 }
 
 .section.light {
-  background: #ffffff;
+  background: white;
 }
 
 .center {
@@ -143,187 +103,32 @@ body {
   margin-bottom: 40px;
 }
 
-/* =====================
-   CONTENT BOX
-===================== */
-.content-box {
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  padding: 35px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-/* =====================
-   KPI DASHBOARD
-===================== */
-.kpi-grid {
-  max-width: 1100px;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-}
-
-.kpi-card {
-  background: white;
-  padding: 25px;
-  text-align: center;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.kpi-card h3 {
-  font-size: 2rem;
-  color: #0b1d39;
-}
-
-/* =====================
-   CHARTS
-===================== */
-.charts-grid {
-  max-width: 1100px;
-  margin: 50px auto 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.chart-card {
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.bar-chart {
-  display: flex;
-  align-items: flex-end;
-  gap: 14px;
-  height: 180px;
-  margin-top: 25px;
-}
-
-.bar {
-  flex: 1;
-  background: #facc15;
-  border-radius: 6px 6px 0 0;
-  text-align: center;
-  color: #020617;
-  font-size: 0.8rem;
-}
-
-/* =====================
-   PROGRESS BARS
-===================== */
-.progress {
-  margin-top: 18px;
-}
-
-.progress-bar {
-  background: #e5e7eb;
-  height: 10px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.progress-bar span {
-  display: block;
-  height: 100%;
-  background: #facc15;
-}
-
-/* =====================
-   TIMELINE / CARDS
-===================== */
-.timeline {
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  gap: 28px;
-}
-
+/* CARDS */
 .card {
   background: white;
-  padding: 28px;
+  padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.card .meta {
-  font-size: 0.85rem;
-  color: #64748b;
-  margin-bottom: 10px;
-}
-
-/* =====================
-   SKILLS
-===================== */
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.skill-card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
-  margin-bottom: 60px;
-}
-
-.skill-card {
-  background: white;
-  padding: 26px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
+/* GRID */
+.kpi-grid,
+.skill-card-grid,
 .soft-skill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  gap: 20px;
 }
 
-.soft-skill-card {
-  background: linear-gradient(135deg, #0b1d39, #102b5c);
-  color: white;
-  padding: 18px;
-  border-radius: 30px;
-  text-align: center;
-}
-
-/* =====================
-   CERTIFICATIONS
-===================== */
-.cert-list {
-  max-width: 850px;
-  margin: auto;
-  list-style: none;
-}
-
-.cert-list li {
-  background: white;
-  padding: 14px 20px;
-  margin-bottom: 12px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-}
-
-/* =====================
-   FOOTER
-===================== */
+/* FOOTER */
 .footer {
   background: #020617;
   color: #94a3b8;
   text-align: center;
   padding: 22px;
-  font-size: 0.85rem;
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
+/* MOBILE */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
