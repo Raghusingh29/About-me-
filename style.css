@@ -1,20 +1,18 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BASE */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background-color: #f5f7fa;
     color: #2c2c2c;
     line-height: 1.7;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 /* NAVBAR */
@@ -55,7 +53,6 @@ html {
     color: #e5e7eb;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: color 0.3s;
 }
 
 .nav-links a:hover,
@@ -63,7 +60,6 @@ html {
     color: #eab308;
 }
 
-/* Resume PDF highlight */
 .nav-links a[href$=".pdf"] {
     padding: 6px 12px;
     border: 1.5px solid #eab308;
@@ -85,7 +81,6 @@ html {
 .tagline {
     margin-top: 8px;
     font-size: 1.05rem;
-    opacity: 0.9;
 }
 
 .contact {
@@ -149,7 +144,6 @@ html {
     margin-bottom: 10px;
 }
 
-/* LISTS */
 ul {
     padding-left: 18px;
 }
