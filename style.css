@@ -1,15 +1,23 @@
-/* ===============================
-   NAVBAR FIX (CRITICAL)
-================================ */
-
-/* Remove default list styling */
-.navbar ul {
-    list-style: none;
+/* RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Navbar container */
+/* BASE */
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #2c2c2c;
+    line-height: 1.7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
 .navbar {
     position: sticky;
     top: 0;
@@ -17,42 +25,172 @@
     z-index: 1000;
 }
 
-/* Align navbar content */
 .nav-container {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
     padding: 14px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Logo */
 .nav-logo {
     color: #ffffff;
-    font-size: 0.95rem;
     font-weight: 600;
 }
 
-/* Nav links */
 .nav-links {
+    list-style: none;
     display: flex;
     gap: 22px;
 }
 
 .nav-links a {
-    color: #e5e7eb;
     text-decoration: none;
+    color: #e5e7eb;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: color 0.25s ease;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
     color: #eab308;
 }
 
-/* Push hero below navbar */
+/* Resume PDF Highlight */
+.nav-links a[href$=".pdf"] {
+    padding: 6px 12px;
+    border: 1.5px solid #eab308;
+    border-radius: 4px;
+}
+
+/* HERO */
 .hero {
-    margin-top: 0;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+}
+
+.tagline {
+    margin-top: 8px;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+.contact {
+    margin: 14px 0;
+    font-size: 0.9rem;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 22px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 6px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #eab308;
+    color: #0f172a;
+}
+
+.btn.outline {
+    border: 2px solid #eab308;
+    color: #eab308;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* CONTENT */
+.container {
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 26px;
+    margin-bottom: 28px;
+    border-radius: 8px;
+    border: 1px solid #e6e8eb;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+/* LISTS */
+ul {
+    padding-left: 18px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background-color: #eef2f7;
+    border: 1px solid #dde3ea;
+    padding: 7px 14px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 0.85rem;
+}
+
+/* ANIMATIONS */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.1s ease forwards;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.9s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
 }
