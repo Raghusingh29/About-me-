@@ -6,7 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<script>
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+    const target = Number(counter.dataset.target);
+    let current = 0;
+
+    const update = () => {
+        if (current < target) {
+            current += Math.ceil(target / 60);
+            counter.innerText = current;
+            requestAnimationFrame(update);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    update();
+});
+</script>
+
+    <body>
 
 <!-- NAVBAR -->
 <nav class="navbar">
