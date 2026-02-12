@@ -23,6 +23,11 @@ html {
     top: 0;
     background-color: #0f172a;
     z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .nav-container {
@@ -53,11 +58,12 @@ html {
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: #eab308;
 }
 
-/* Resume PDF Highlight */
+/* Resume PDF highlight */
 .nav-links a[href$=".pdf"] {
     padding: 6px 12px;
     border: 1.5px solid #eab308;
@@ -113,7 +119,8 @@ html {
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* CONTENT */
@@ -164,6 +171,13 @@ li {
     padding: 7px 14px;
     border-radius: 16px;
     font-size: 0.85rem;
+    transition: all 0.25s ease;
+}
+
+.skills span:hover {
+    background-color: #eab308;
+    color: #0f172a;
+    transform: translateY(-3px);
 }
 
 /* FOOTER */
@@ -181,16 +195,20 @@ footer {
     animation: fadeIn 1.1s ease forwards;
 }
 
-.fade-up {
+.reveal {
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.9s ease forwards;
+    transform: translateY(35px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes fadeIn {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
