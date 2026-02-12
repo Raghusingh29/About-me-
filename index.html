@@ -1,255 +1,336 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Raghvendra Singh | Finance & Marketing Analytics Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-</head>
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<body>
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+  line-height: 1.6;
+}
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-logo">Raghvendra Singh</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#analytics">Analytics</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="Raghvendra_Singh_CV.pdf.pdf" target="_blank">Resume</a></li>
-    </ul>
-  </div>
-</nav>
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, #0b1d39, #102b5c);
+  z-index: 1000;
+}
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-box">
-    <h1>Raghvendra Singh</h1>
-    <p class="hero-sub">
-      PGDM (Finance & Marketing) | Finance & Business Analytics
-    </p>
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    <div class="hero-meta">
-      <span>📍 Greater Noida</span>
-      <span>📞 7270897221</span>
-      <span>✉️ raghvendra.singh@glbimr.org</span>
-    </div>
+.nav-logo {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
 
-    <div class="hero-actions">
-      <a href="Raghvendra_Singh_CV.pdf.pdf" class="btn primary" target="_blank">View Resume</a>
-      <a href="https://www.linkedin.com/in/raghvendra-singh-2026rs" class="btn outline" target="_blank">LinkedIn</a>
-    </div>
-  </div>
-</section>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
 
-<!-- PROFILE -->
-<section class="section light" id="profile">
-  <div class="content-box">
-    <h2>Professional Summary</h2>
-    <p>
-      I am a B.Com (Hons) graduate from Chandigarh University, currently pursuing PGDM
-      in Finance and Marketing. I have experience as a Finance Associate at Modento Pvt.
-      Ltd., where I managed financial operations, conducted in-depth analysis, supported
-      budgeting and forecasting activities, and ensured compliance and reporting accuracy.
-      I am skilled in financial data handling, Excel-based reporting, Power BI dashboards,
-      and market research, with a strong analytical and problem-solving mindset.
-    </p>
-  </div>
-</section>
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
 
-<!-- ANALYTICS DASHBOARD -->
-<section class="section dashboard-section" id="analytics">
-<h2 class="center">Analytics Dashboard (Sample / Academic)</h2>
+.nav-links a:hover {
+  color: #facc15;
+}
 
-<div class="kpi-grid">
-  <div class="kpi-card">
-    <h3><span class="counter" data-target="18">0</span>%</h3>
-    <p>Revenue Growth Analysis</p>
-  </div>
-  <div class="kpi-card">
-    <h3><span class="counter" data-target="12">0</span>%</h3>
-    <p>Cost Optimization Identified</p>
-  </div>
-  <div class="kpi-card">
-    <h3><span class="counter" data-target="25">0</span>+</h3>
-    <p>Financial Reports Prepared</p>
-  </div>
-  <div class="kpi-card">
-    <h3><span class="counter" data-target="6">0</span></h3>
-    <p>Dashboards & Case Studies</p>
-  </div>
-</div>
+/* =====================
+   HERO
+===================== */
+.hero {
+  background: linear-gradient(135deg, #020617, #0b1d39);
+  padding: 90px 20px;
+  text-align: center;
+  color: white;
+}
 
-<div class="charts-grid">
-  <div class="chart-card">
-    <h3>Quarterly Revenue Trend</h3>
-    <div class="bar-chart">
-      <div class="bar" style="height:60%">Q1</div>
-      <div class="bar" style="height:75%">Q2</div>
-      <div class="bar" style="height:85%">Q3</div>
-      <div class="bar" style="height:95%">Q4</div>
-    </div>
-  </div>
+.hero-box {
+  max-width: 850px;
+  margin: auto;
+}
 
-  <div class="chart-card">
-    <h3>Expense Distribution</h3>
-    <div class="progress">
-      <label>Operations – 45%</label>
-      <div class="progress-bar"><span style="width:45%"></span></div>
-    </div>
-    <div class="progress">
-      <label>Marketing – 30%</label>
-      <div class="progress-bar"><span style="width:30%"></span></div>
-    </div>
-    <div class="progress">
-      <label>Logistics – 25%</label>
-      <div class="progress-bar"><span style="width:25%"></span></div>
-    </div>
-  </div>
-</div>
-</section>
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
 
-<!-- EXPERIENCE & EDUCATION -->
-<section class="section light" id="experience">
-<h2 class="center">Education & Experience</h2>
+.hero-sub {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
 
-<div class="timeline">
+.hero-meta {
+  margin: 18px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 0.95rem;
+}
 
-<div class="card">
-<h3>Finance Associate – Modento Pvt. Ltd.</h3>
-<p class="meta">Aug 2023 – Jun 2025</p>
-<ul>
-<li>Analyzed financial statements, budgets, and forecasts</li>
-<li>Supported financial planning and cost optimization</li>
-<li>Processed financial documents using Excel and accounting tools</li>
-</ul>
-</div>
+.hero-actions {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
 
-<div class="card">
-<h3>Finance Intern – Learnovate E-Commerce</h3>
-<p class="meta">2023 (1.5 months)</p>
-<ul>
-<li>Assisted in basic financial analysis and reporting</li>
-</ul>
-</div>
+/* =====================
+   BUTTONS
+===================== */
+.btn {
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
 
-<div class="card">
-<h3>Live Project – Dabur India Ltd.</h3>
-<p class="meta">12 Aug 2025 – 24 Aug 2025</p>
-<ul>
-<li>Marketing strategy, consumer insights & brand positioning</li>
-<li>Market research for pricing and promotions</li>
-</ul>
-</div>
+.btn.primary {
+  background: #facc15;
+  color: #020617;
+  font-weight: 600;
+}
 
-<div class="card">
-<h3>Education</h3>
-<ul>
-<li>PGDM (Finance & Marketing) – G.L. Bajaj, Greater Noida (2025–2027)</li>
-<li>B.Com (Hons) Finance – Chandigarh University (2020–2023)</li>
-<li>Higher Secondary (Commerce) – 2018–2019</li>
-<li>Matriculation – 2016–2017</li>
-</ul>
-</div>
+.btn.primary:hover {
+  background: #eab308;
+}
 
-</div>
-</section>
+.btn.outline {
+  border: 1px solid #facc15;
+  color: #facc15;
+}
 
-<section class="section" id="skills">
-  <div class="container">
+.btn.outline:hover {
+  background: #facc15;
+  color: #020617;
+}
 
-    <h2 class="center">Technical Skills</h2>
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 70px 20px;
+}
 
-    <div class="skill-card-grid">
+.section.light {
+  background: #ffffff;
+}
 
-      <div class="skill-card">
-        <h3>Finance & Analysis</h3>
-        <ul>
-          <li>Financial Analysis & Forecasting</li>
-          <li>Budgeting & Analysis</li>
-          <li>Cost Optimization</li>
-          <li>Financial Reporting</li>
-        </ul>
-      </div>
+.center {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-      <div class="skill-card">
-        <h3>Tools & Analytics</h3>
-        <ul>
-          <li>Microsoft Excel (Advanced)</li>
-          <li>Power BI (Sales Dashboards)</li>
-          <li>IBM SPSS (Intermediate)</li>
-          <li>Microsoft Office</li>
-        </ul>
-      </div>
+/* =====================
+   CONTENT BOX
+===================== */
+.content-box {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-      <div class="skill-card">
-        <h3>Marketing</h3>
-        <ul>
-          <li>Market Research & Competitor Analysis</li>
-          <li>Marketing Strategy & Planning</li>
-          <li>Consumer Insights</li>
-          <li>Sales Performance Tracking</li>
-        </ul>
-      </div>
+/* =====================
+   KPI DASHBOARD
+===================== */
+.kpi-grid {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
 
-    </div>
+.kpi-card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-    <h2 class="center">Soft Skills</h2>
+.kpi-card h3 {
+  font-size: 2rem;
+  color: #0b1d39;
+}
 
-    <div class="soft-skill-grid">
-      <div class="soft-skill-card">Strong Communication & Presentation</div>
-      <div class="soft-skill-card">Team Collaboration</div>
-      <div class="soft-skill-card">Time Management</div>
-      <div class="soft-skill-card">Problem-Solving</div>
-      <div class="soft-skill-card">Analytical Thinking</div>
-    </div>
+/* =====================
+   CHARTS
+===================== */
+.charts-grid {
+  max-width: 1100px;
+  margin: 50px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
 
-  </div>
-</section>
+.chart-card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
 
-<!-- CERTIFICATIONS -->
-<section class="section light" id="certifications">
-<h2 class="center">Certifications</h2>
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  height: 180px;
+  margin-top: 25px;
+}
 
-<ul class="cert-list">
-<li>Portfolio & Risk Management – University of Geneva (Coursera)</li>
-<li>Leadership Skills – IIM Ahmedabad (Coursera)</li>
-<li>Google Data Analytics Foundation – Coursera</li>
-<li>Investment Banking Job Simulation – JP Morgan (Forage)</li>
-<li>Cash Flow & Profit and Loss – HP LIFE</li>
-<li>IELTS Qualified – B2 Level</li>
-<li>International Business – Swayam</li>
-<li>Entrepreneurship – NPTEL</li>
-<li>Business & Professional Ethics – LinkedIn</li>
-<li>Course on Computer Concepts – NIELIT</li>
-</ul>
-</section>
+.bar {
+  flex: 1;
+  background: #facc15;
+  border-radius: 6px 6px 0 0;
+  text-align: center;
+  color: #020617;
+  font-size: 0.8rem;
+}
 
-<footer class="footer">
-<p>© 2026 Raghvendra Singh | Finance & Marketing Analytics Portfolio</p>
-</footer>
+/* =====================
+   PROGRESS BARS
+===================== */
+.progress {
+  margin-top: 18px;
+}
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".counter").forEach(counter => {
-    const target = +counter.dataset.target;
-    let current = 0;
-    const step = Math.max(1, Math.floor(target / 50));
-    const update = () => {
-      if (current < target) {
-        current += step;
-        counter.textContent = current;
-        setTimeout(update, 30);
-      } else counter.textContent = target;
-    };
-    update();
-  });
-});
-</script>
+.progress-bar {
+  background: #e5e7eb;
+  height: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
 
-</body>
-</html>
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: #facc15;
+}
+
+/* =====================
+   TIMELINE / CARDS
+===================== */
+.timeline {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  gap: 28px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card .meta {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+/* =====================
+   SKILLS
+===================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.skill-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+  margin-bottom: 60px;
+}
+
+.skill-card {
+  background: white;
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.soft-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.soft-skill-card {
+  background: linear-gradient(135deg, #0b1d39, #102b5c);
+  color: white;
+  padding: 18px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* =====================
+   CERTIFICATIONS
+===================== */
+.cert-list {
+  max-width: 850px;
+  margin: auto;
+  list-style: none;
+}
+
+.cert-list li {
+  background: white;
+  padding: 14px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background: #020617;
+  color: #94a3b8;
+  text-align: center;
+  padding: 22px;
+  font-size: 0.85rem;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
