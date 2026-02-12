@@ -1,177 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Raghvendra Singh | Finance & Marketing Professional</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">RS Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="Raghvendra_Singh_CV.pdf" target="_blank">Resume PDF</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-
-<!-- HERO -->
-<header class="hero" id="home">
-    <div class="hero-content fade-in">
-        <h1>Raghvendra Singh</h1>
-        <p class="tagline">PGDM (Finance & Marketing)</p>
-
-        <p class="contact">
-            📍 Greater Noida &nbsp; | &nbsp;
-            📞 7270897221 &nbsp; | &nbsp;
-            ✉️ raghvendra.singh@glbimr.org
-        </p>
-
-        <div class="buttons">
-            <a href="https://www.linkedin.com/in/raghvendra-singh-2026rs" target="_blank" class="btn outline">
-                LinkedIn
-            </a>
-            <a href="Raghvendra_Singh_CV.pdf" download class="btn primary">
-                Download CV
-            </a>
-        </div>
-    </div>
-</header>
-
-<!-- MAIN CONTENT -->
-<main class="container">
-
-<section class="card reveal" id="profile">
-    <h2>Professional Profile</h2>
-    <p>
-        PGDM (Finance & Marketing) candidate with strong academic grounding in financial
-        management and marketing strategy. Experienced in financial reporting, budgeting,
-        cost control, and market research with exposure to real-world corporate finance
-        operations and marketing projects. Seeking entry-level roles in finance,
-        marketing, or management.
-    </p>
-</section>
-
-<section class="card reveal">
-    <h2>Education</h2>
-    <ul>
-        <li><strong>PGDM (Finance & Marketing)</strong> – G.L. Bajaj Institute of Management & Research (2025–2027)</li>
-        <li><strong>B.Com (Hons) – Finance</strong> – Chandigarh University (2020–2023)</li>
-        <li><strong>Higher Secondary (Commerce)</strong> – Stepping Stone Inter College (2018–2019)</li>
-        <li><strong>Matriculation</strong> – H.P. Children’s Academy (2016–2017)</li>
-    </ul>
-</section>
-
-<section class="card reveal">
-    <h2>Internship & Work Experience</h2>
-
-    <h3>Finance Associate – Modento Pvt. Ltd.</h3>
-    <p><em>Aug 2023 – Jun 2025</em></p>
-    <ul>
-        <li>Analyzed financial statements, budgets, and expense reports</li>
-        <li>Supported financial planning, forecasting, and cost optimization</li>
-        <li>Prepared Excel-based reports for management decision-making</li>
-        <li>Ensured accuracy and compliance in financial documentation</li>
-    </ul>
-
-    <h3>Live Project – Dabur India Ltd.</h3>
-    <p><em>Aug 2025</em></p>
-    <ul>
-        <li>Worked on marketing strategy, consumer insights, and brand positioning</li>
-        <li>Conducted market and competitor analysis</li>
-        <li>Supported pricing and promotional strategy evaluation</li>
-    </ul>
-</section>
-
-<section class="card reveal">
-    <h2>Finance & Marketing Skills</h2>
-    <div class="skills">
-        <span>Financial Analysis & Reporting</span>
-        <span>Budgeting & Cost Control</span>
-        <span>Basic Financial Forecasting</span>
-        <span>Market Research & Analysis</span>
-        <span>Marketing Strategy & Planning</span>
-        <span>Sales & Performance Analysis</span>
-        <span>Business Reporting</span>
-    </div>
-</section>
-
-<section class="card reveal">
-    <h2>Tools & Software</h2>
-    <div class="skills">
-        <span>Microsoft Excel (Advanced)</span>
-        <span>PowerPoint (Business Presentations)</span>
-        <span>Microsoft Word</span>
-        <span>Power BI (Basic Dashboards)</span>
-        <span>IBM SPSS (Basic Analysis)</span>
-    </div>
-</section>
-
-<section class="card reveal">
-    <h2>Professional Skills</h2>
-    <div class="skills">
-        <span>Business Communication</span>
-        <span>Analytical Thinking</span>
-        <span>Team Collaboration</span>
-        <span>Time Management</span>
-        <span>Problem Solving</span>
-    </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer id="contact">
-    <p>© 2026 Raghvendra Singh | 📞 7270897221 | ✉️ raghvendra.singh@glbimr.org</p>
-</footer>
-
-<!-- INTERACTION SCRIPT -->
-<script>
-/* Scroll reveal */
-const reveals = document.querySelectorAll('.reveal');
-
-function revealOnScroll() {
-    reveals.forEach(section => {
-        const windowHeight = window.innerHeight;
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < windowHeight - 100) {
-            section.classList.add('active');
-        }
-    });
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
+html {
+    scroll-behavior: smooth;
+}
 
-/* Navbar shadow + active link */
-const navbar = document.querySelector('.navbar');
-const navLinks = document.querySelectorAll('.nav-links a');
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #2c2c2c;
+    line-height: 1.7;
+}
 
-window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #0f172a;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
 
-    let current = '';
-    document.querySelectorAll('section[id]').forEach(section => {
-        const sectionTop = section.offsetTop - 140;
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute('id');
-        }
-    });
+.navbar.scrolled {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-        }
-    });
-});
-</script>
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-</body>
-</html>
+.nav-logo {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #eab308;
+}
+
+.nav-links a[href$=".pdf"] {
+    padding: 6px 12px;
+    border: 1.5px solid #eab308;
+    border-radius: 4px;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+}
+
+.tagline {
+    margin-top: 8px;
+    font-size: 1.05rem;
+}
+
+.contact {
+    margin: 14px 0;
+    font-size: 0.9rem;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 22px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 6px;
+    display
