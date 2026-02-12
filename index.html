@@ -7,25 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <script>
-const counters = document.querySelectorAll('.counter');
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
-    const target = +counter.getAttribute('data-target');
-    let count = 0;
-    const speed = target / 60;
+    counters.forEach(counter => {
+        const target = Number(counter.dataset.target);
+        let current = 0;
+        const increment = Math.max(1, Math.floor(target / 50));
 
-    const updateCount = () => {
-        if (count < target) {
-            count += speed;
-            counter.innerText = Math.ceil(count);
-            requestAnimationFrame(updateCount);
-        } else {
-            counter.innerText = target;
-        }
-    };
-    updateCount();
+        const updateCounter = () => {
+            if (current < target) {
+                current += increment;
+                counter.textContent = current;
+                setTimeout(updateCounter, 30);
+            } else {
+                counter.textContent = target;
+            }
+        };
+
+        updateCounter();
+    });
 });
 </script>
+
 
     <body>
 
