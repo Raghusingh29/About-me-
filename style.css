@@ -1,31 +1,143 @@
 /* ===============================
+   RESET & BASE
+================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero {
+    background: linear-gradient(135deg, #0b3c5d, #06293d);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.contact {
+    margin: 15px 0;
+    font-size: 0.95rem;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: #ffcc00;
+    color: #0b3c5d;
+}
+
+.btn.outline {
+    border: 2px solid #ffcc00;
+    color: #ffcc00;
+}
+
+/* ===============================
+   MAIN CONTENT
+================================ */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    color: #0b3c5d;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-top: 15px;
+}
+
+/* ===============================
+   SKILLS
+================================ */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background: #e1ecf4;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0b3c5d;
+    color: white;
+}
+
+/* ===============================
    GLOBAL ANIMATIONS
 ================================ */
-
 html {
     scroll-behavior: smooth;
 }
 
-/* Fade In */
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.2s ease forwards;
 }
 
-/* Fade Up */
 .fade-up {
     opacity: 0;
     transform: translateY(40px);
     animation: fadeUp 1s ease forwards;
 }
 
-/* Stagger effect */
 .fade-up:nth-of-type(1) { animation-delay: 0.2s; }
 .fade-up:nth-of-type(2) { animation-delay: 0.4s; }
 .fade-up:nth-of-type(3) { animation-delay: 0.6s; }
 .fade-up:nth-of-type(4) { animation-delay: 0.8s; }
 
-/* Keyframes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -44,10 +156,7 @@ html {
     }
 }
 
-/* ===============================
-   HOVER INTERACTIONS
-================================ */
-
+/* Hover animations */
 .card {
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
@@ -57,7 +166,6 @@ html {
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Buttons */
 .btn {
     transition: all 0.3s ease;
 }
