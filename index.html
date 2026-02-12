@@ -61,72 +61,56 @@
   </div>
 </section>
 
+<!-- ANALYTICS DASHBOARD -->
 <section class="section dashboard-section" id="analytics">
-  <h2 class="center">Analytics Dashboard (Sample / Academic)</h2>
+<h2 class="center">Analytics Dashboard (Sample / Academic)</h2>
 
-  <!-- KPI CARDS -->
-  <div class="kpi-grid">
-    <div class="kpi-card">
-      <h3>18%</h3>
-      <p>Revenue Growth Analyzed</p>
-    </div>
-    <div class="kpi-card">
-      <h3>12%</h3>
-      <p>Cost Optimization Identified</p>
-    </div>
-    <div class="kpi-card">
-      <h3>25+</h3>
-      <p>Financial Reports Prepared</p>
-    </div>
-    <div class="kpi-card">
-      <h3>6</h3>
-      <p>Dashboards & Case Studies</p>
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <h3><span class="counter" data-target="18">0</span>%</h3>
+    <p>Revenue Growth Analysis</p>
+  </div>
+  <div class="kpi-card">
+    <h3><span class="counter" data-target="12">0</span>%</h3>
+    <p>Cost Optimization Identified</p>
+  </div>
+  <div class="kpi-card">
+    <h3><span class="counter" data-target="25">0</span>+</h3>
+    <p>Financial Reports Prepared</p>
+  </div>
+  <div class="kpi-card">
+    <h3><span class="counter" data-target="6">0</span></h3>
+    <p>Dashboards & Case Studies</p>
+  </div>
+</div>
+
+<div class="charts-grid">
+  <div class="chart-card">
+    <h3>Quarterly Revenue Trend</h3>
+    <div class="bar-chart">
+      <div class="bar" style="height:60%">Q1</div>
+      <div class="bar" style="height:75%">Q2</div>
+      <div class="bar" style="height:85%">Q3</div>
+      <div class="bar" style="height:95%">Q4</div>
     </div>
   </div>
 
-  <!-- GRAPHS -->
-  <div class="charts-grid">
-
-    <!-- BAR GRAPH -->
-    <div class="chart-card">
-      <h3>Quarterly Revenue Trend</h3>
-      <div class="bar-chart">
-        <div class="bar" style="height:55%">Q1</div>
-        <div class="bar" style="height:70%">Q2</div>
-        <div class="bar" style="height:82%">Q3</div>
-        <div class="bar" style="height:95%">Q4</div>
-      </div>
+  <div class="chart-card">
+    <h3>Expense Distribution</h3>
+    <div class="progress">
+      <label>Operations – 45%</label>
+      <div class="progress-bar"><span style="width:45%"></span></div>
     </div>
-
-    <!-- EXPENSE GRAPH -->
-    <div class="chart-card">
-      <h3>Expense Distribution</h3>
-
-      <div class="progress">
-        <label>Operations – 45%</label>
-        <div class="progress-bar"><span style="width:45%"></span></div>
-      </div>
-
-      <div class="progress">
-        <label>Marketing – 30%</label>
-        <div class="progress-bar"><span style="width:30%"></span></div>
-      </div>
-
-      <div class="progress">
-        <label>Logistics – 25%</label>
-        <div class="progress-bar"><span style="width:25%"></span></div>
-      </div>
+    <div class="progress">
+      <label>Marketing – 30%</label>
+      <div class="progress-bar"><span style="width:30%"></span></div>
+    </div>
+    <div class="progress">
+      <label>Logistics – 25%</label>
+      <div class="progress-bar"><span style="width:25%"></span></div>
     </div>
   </div>
-
-  <!-- DASHBOARD IMAGES -->
-  <h3 class="center" style="margin-top:60px;">Dashboard Snapshots</h3>
-
-  <div class="dashboard-images">
-    <img src="images/dashboard1.png" alt="Sales Dashboard">
-    <img src="images/dashboard2.png" alt="Financial Report">
-    <img src="images/dashboard3.png" alt="Marketing Analysis">
-  </div>
+</div>
 </section>
 
 <!-- EXPERIENCE & EDUCATION -->
@@ -264,6 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
