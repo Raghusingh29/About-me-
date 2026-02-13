@@ -118,6 +118,21 @@ body {
     text-align: center;
     font-size: 0.9rem;
 }
+/* ===============================
+   SOFT SKILLS ALIGNMENT
+================================ */
+
+.soft-skill-grid {
+  max-width: 900px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.soft-skill-card {
+  text-align: center;
+}
 
 /* EXPERIENCE */
 .timeline {
