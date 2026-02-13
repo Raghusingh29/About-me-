@@ -237,16 +237,19 @@ body {
   height: 100%;
   background: linear-gradient(90deg, #38bdf8, #2563eb);
 }
-/* GRAPH PULSE */
+/* FLOATING SOFT SKILLS */
 
-.graph-card {
-  animation: pulse 1.2s ease;
+.soft-skill-card {
+  animation: float 3s ease-in-out infinite;
 }
 
-@keyframes pulse {
-  0% { transform: scale(0.96); }
-  60% { transform: scale(1.02); }
-  100% { transform: scale(1); }
+.soft-skill-card:nth-child(2) { animation-delay: 0.5s; }
+.soft-skill-card:nth-child(3) { animation-delay: 1s; }
+.soft-skill-card:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 }
