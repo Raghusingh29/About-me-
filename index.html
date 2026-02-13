@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -58,7 +59,6 @@
 <section class="section dashboard-section" id="analytics">
     <h2 class="center">Analytics Performance Snapshot</h2>
 
-    <!-- KPI GRID -->
     <div class="kpi-grid">
         <div class="kpi-card">
             <h3><span class="counter" data-target="18">0</span>%</h3>
@@ -86,10 +86,7 @@
         </div>
     </div>
 
-    <!-- CHARTS -->
     <div class="charts-grid">
-
-        <!-- QUARTERLY REVENUE -->
         <div class="chart-card">
             <h3>Quarterly Revenue Trend</h3>
             <div class="bar-chart">
@@ -100,7 +97,6 @@
             </div>
         </div>
 
-        <!-- MONTHLY PERFORMANCE -->
         <div class="chart-card">
             <h3>Monthly Performance Index</h3>
             <div class="bar-chart small">
@@ -113,7 +109,6 @@
             </div>
         </div>
 
-        <!-- EXPENSE MIX -->
         <div class="chart-card">
             <h3>Expense Mix Analysis</h3>
             <div class="progress">
@@ -129,21 +124,16 @@
                 <div class="progress-bar"><span style="width:25%"></span></div>
             </div>
         </div>
-
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
     <p>© 2026 Raghvendra Singh | Finance & Marketing Analytics Portfolio</p>
 </footer>
 
-<!-- INTERACTIVITY SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".counter");
-
-    counters.forEach(counter => {
+    document.querySelectorAll(".counter").forEach(counter => {
         const target = Number(counter.dataset.target);
         let current = 0;
         const increment = Math.max(1, Math.floor(target / 60));
