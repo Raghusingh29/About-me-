@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Raghvendra Singh | Finance & Marketing Analytics Portfolio</title>
+  <title>Raghvendra Singh | Finance & Marketing Analytics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -40,7 +40,7 @@
 
     <div class="hero-actions">
       <a href="Raghvendra_Singh_CV.pdf" class="btn primary" target="_blank">View Resume</a>
-      <a href="https://www.linkedin.com/in/raghvendra-singh-2026rs" class="btn outline" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com" class="btn outline" target="_blank">LinkedIn</a>
     </div>
   </div>
 </section>
@@ -50,89 +50,11 @@
   <div class="content-box">
     <h2>Professional Summary</h2>
     <p>
-      B.Com (Hons) graduate from Chandigarh University, currently pursuing PGDM in Finance and Marketing.
-      Former Finance Associate at Modento Pvt. Ltd., Gorakhpur, with experience in financial operations,
-      budgeting, forecasting, compliance reporting, and cost optimization.
-      Strong analytical mindset with hands-on exposure to Excel, Power BI dashboards,
-      SPSS, and market research to support strategic business decisions and sustainable growth.
+      Finance and Marketing PGDM candidate with hands-on experience in financial analysis,
+      budgeting, forecasting, and marketing analytics. Former Finance Associate at Modento Pvt. Ltd.,
+      proficient in Excel, Power BI, and SPSS, with experience building dashboards and supporting
+      strategic business decisions.
     </p>
-  </div>
-</section>
-
-<!-- ANALYTICS DASHBOARD -->
-<section class="section dashboard-section" id="analytics">
-  <h2 class="center">Analytics Dashboard (Academic & Project-Based)</h2>
-
-  <!-- KPI GRID -->
-  <div class="kpi-grid">
-    <div class="kpi-card">
-      <h3><span class="counter" data-target="18">0</span>%</h3>
-      <p>Revenue Growth Analysis</p>
-    </div>
-    <div class="kpi-card">
-      <h3><span class="counter" data-target="12">0</span>%</h3>
-      <p>Cost Optimization Identified</p>
-    </div>
-    <div class="kpi-card">
-      <h3><span class="counter" data-target="25">0</span>+</h3>
-      <p>Financial Reports Prepared</p>
-    </div>
-    <div class="kpi-card">
-      <h3><span class="counter" data-target="6">0</span></h3>
-      <p>Power BI Dashboards</p>
-    </div>
-    <div class="kpi-card">
-      <h3><span class="counter" data-target="4">0</span></h3>
-      <p>Market Studies Conducted</p>
-    </div>
-    <div class="kpi-card">
-      <h3><span class="counter" data-target="22">0</span>%</h3>
-      <p>Campaign ROI Improvement</p>
-    </div>
-  </div>
-
-  <!-- CHARTS -->
-  <div class="charts-grid">
-
-    <!-- REVENUE -->
-    <div class="chart-card">
-      <h3>Quarterly Revenue Trend</h3>
-      <div class="bar-chart">
-        <div class="bar" style="height:60%">Q1</div>
-        <div class="bar" style="height:72%">Q2</div>
-        <div class="bar" style="height:85%">Q3</div>
-        <div class="bar" style="height:95%">Q4</div>
-      </div>
-    </div>
-
-    <!-- MARKETING PERFORMANCE -->
-    <div class="chart-card">
-      <h3>Marketing Performance Index</h3>
-      <div class="bar-chart small">
-        <div class="bar" style="height:45%">Awareness</div>
-        <div class="bar" style="height:65%">Leads</div>
-        <div class="bar" style="height:80%">Conversions</div>
-        <div class="bar" style="height:70%">Retention</div>
-      </div>
-    </div>
-
-    <!-- COST STRUCTURE -->
-    <div class="chart-card">
-      <h3>Expense Distribution</h3>
-      <div class="progress">
-        <label>Operations – 45%</label>
-        <div class="progress-bar"><span style="width:45%"></span></div>
-      </div>
-      <div class="progress">
-        <label>Marketing – 30%</label>
-        <div class="progress-bar"><span style="width:30%"></span></div>
-      </div>
-      <div class="progress">
-        <label>Logistics – 25%</label>
-        <div class="progress-bar"><span style="width:25%"></span></div>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -172,7 +94,8 @@
     </div>
   </div>
 
-  <h2 class="center">Soft Skills</h2>
+  <h2 class="center" style="margin-top:60px;">Soft Skills</h2>
+
   <div class="soft-skill-grid">
     <div class="soft-skill-card">Strong Communication & Presentation</div>
     <div class="soft-skill-card">Team Collaboration</div>
@@ -218,25 +141,6 @@
 <footer class="footer">
   <p>© 2026 Raghvendra Singh | Finance & Marketing Analytics Portfolio</p>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".counter").forEach(counter => {
-    const target = +counter.dataset.target;
-    let count = 0;
-    const step = Math.max(1, Math.floor(target / 50));
-
-    const update = () => {
-      if (count < target) {
-        count += step;
-        counter.textContent = count;
-        setTimeout(update, 30);
-      } else counter.textContent = target;
-    };
-    update();
-  });
-});
-</script>
 
 </body>
 </html>
