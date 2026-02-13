@@ -237,6 +237,17 @@ body {
   height: 100%;
   background: linear-gradient(90deg, #38bdf8, #2563eb);
 }
+/* GRAPH PULSE */
+
+.graph-card {
+  animation: pulse 1.2s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.96); }
+  60% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
 
 }
 
